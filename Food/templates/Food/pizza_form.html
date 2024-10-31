@@ -1,0 +1,17 @@
+<!-- myproject/Food/templates/Food/pizza_form.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if object %}Edit Pizza{% else %}Add New Pizza{% endif %}</title>
+</head>
+<body>
+    <h1>{% if object %}Edit Pizza{% else %}Add New Pizza{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'pizza_list' %}">Back to Pizza List</a>
+</body>
+</html>

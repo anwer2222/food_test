@@ -1,0 +1,21 @@
+<!-- myproject/Food/templates/Food/pizza_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pizza List</title>
+</head>
+<body>
+    <h1>Pizza List</h1>
+    <a href="{% url 'pizza_create' %}">Add New Pizza</a>
+    <ul>
+        {% for pizza in object_list %}
+            <li>
+                <a href="{% url 'pizza_detail' pizza.pk %}">{{ pizza.name }}</a>
+                <a href="{% url 'pizza_update' pizza.pk %}">Edit تعديل</a>
+                <a href="{% url 'pizza_delete' pizza.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!-- myproject/Food/templates/Food/pizza_detail.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ object.name }}</title>
+</head>
+<body>
+    <h1>{{ object.name }}</h1>
+    <p>Ingredients: {{ object.ingredients }}</p>
+    <p>Price: ${{ object.price }}</p>
+    <a href="{% url 'pizza_list' %}">Back to Pizza List</a>
+</body>
+</html>
